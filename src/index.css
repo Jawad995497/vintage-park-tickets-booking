@@ -104,3 +104,49 @@
 .swiper-slide {
   @apply flex justify-center items-center;
 }
+
+/* Vintage theme colors */
+.text-vintage-dark {
+  color: #4A4A4A;
+}
+
+.text-vintage-gray {
+  color: #D3D3D3;
+}
+
+.bg-vintage-peach {
+  background-color: #FDE1D3;
+}
+
+.bg-vintage-yellow {
+  background-color: #FDF7CD;
+}
+
+.bg-vintage-purple {
+  background-color: #E5DEFF;
+}
+
+.bg-vintage-gray {
+  background-color: #F1F0FB;
+}
+
+.border-vintage-peach {
+  border-color: #FDE1D3;
+}
+
+/* Animation Classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
