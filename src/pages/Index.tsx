@@ -1,9 +1,6 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Ticket, Users, User, Calendar, Star, ArrowRight } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -12,8 +9,6 @@ import 'swiper/css/pagination';
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col vintage-container">
-      <Navbar />
-      
       {/* Hero Section */}
       <section className="relative h-[500px] bg-gradient-to-r from-vintage-peach to-vintage-yellow flex items-center">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?q=80&w=1470&fit=crop')] bg-cover bg-center opacity-20"></div>
@@ -236,8 +231,6 @@ const Index = () => {
           </Link>
         </div>
       </section>
-      
-      <Footer />
     </div>
   );
 };
