@@ -11,6 +11,7 @@ import AdminPackages from "@/components/admin/AdminPackages";
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [isAuthorized, setIsAuthorized] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Check if admin is logged in
@@ -20,6 +21,7 @@ const AdminDashboard = () => {
     } else {
       setIsAuthorized(true);
     }
+    setIsLoading(false);
   }, [navigate]);
 
   const handleLogout = () => {
@@ -27,8 +29,28 @@ const AdminDashboard = () => {
     navigate("/admin");
   };
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-xl text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   if (!isAuthorized) {
-    return <div className="p-8 text-center">Checking authorization...</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Access Denied</h1>
+          <p className="text-xl text-gray-600 mb-4">You need to log in as an admin to access this page.</p>
+          <Link to="/admin" className="text-blue-500 hover:text-blue-700 underline">
+            Go to Admin Login
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   return (

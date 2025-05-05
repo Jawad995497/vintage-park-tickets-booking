@@ -10,7 +10,7 @@ import Attractions from "./pages/Attractions";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/NotFound.jsx"; // Ensure correct file extension
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AdminLogin from "./pages/AdminLogin";
